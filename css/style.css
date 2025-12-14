@@ -64,3 +64,73 @@ hr {
     font-size: 0.9em;
     color: #666;
 }
+
+table {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+caption {
+    font-size: 32px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #8B0000;
+    text-align: center;
+}
+
+th, td {
+    border: 1px solid #eee;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #ffe5e5;
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+.plan-list {
+    list-style: none;
+    padding: 0;
+    counter-reset: step-counter;
+    margin: 30px auto;
+    max-width: 700px;
+}
+
+.plan-list .team-member {
+    position: relative;
+    padding-left: 50px;
+    margin: 0 0 20px 0;
+}
+
+.plan-list .team-member::before {
+    content: counter(step-counter);
+    counter-increment: step-counter;
+    
+    position: absolute;
+    left: 0;
+    top: 5px;
+
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #b00000; 
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
